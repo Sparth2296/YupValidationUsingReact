@@ -28,7 +28,7 @@ body{
         rgba(25, 25, 25, 0.05) -1px -1px 3px 0px inset;
     display: flex;
     flex-direction: column;
-    background-color: rgb(240, 240, 240);
+    background-color: white;
     gap: 8px;
 }
 .formHdng{
@@ -58,6 +58,15 @@ body{
         rgba(255, 255, 255, 0.68) -43px -42px 26px -31px inset,
         rgba(0, 0, 0, 0.03) 29px 29px 43px -19px inset;
     margin-bottom: 20px;
+}
+
+input::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  background-color: transparent;
+  padding: 0.5em;
+  border: none;
+  border-radius: 3px;
 }
 
 .submitbtn,

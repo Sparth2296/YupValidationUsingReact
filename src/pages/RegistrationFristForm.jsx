@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 const RegistrationFristForm = () => {
   const navigate = useNavigate();
 
-  // ✅ Yup validation schema
+  
   const validationSchema = Yup.object({
     firstName: Yup.string()
       .required('First Name is required')
@@ -22,7 +22,7 @@ const RegistrationFristForm = () => {
       .required('Number is required'),
   });
 
-  // ✅ Formik setup
+  
   const formik = useFormik({
     initialValues: {
       firstName: '',
