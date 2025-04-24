@@ -9,8 +9,12 @@ const RegistretionLastForm = () => {
 
   const validationSchema = Yup.object({
     password: Yup.string()
-      .min(6, "Password must be at least 6 characters")
-      .required("Password is required"),
+    .required('Password is required')
+    .min(8, 'Must be at least 8 characters')
+    .matches(/[A-Z]/, 'Must contain an uppercase letter')
+    .matches(/[a-z]/, 'Must contain a lowercase letter')
+    .matches(/\d/, 'Must contain a number')
+    .matches(/[@$!%*?&]/, 'Must contain a special character (@$!%*?&)'),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password")], "Passwords must match")
       .required("Confirm Password is required"),
